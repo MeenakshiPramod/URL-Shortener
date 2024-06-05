@@ -1,0 +1,39 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL SHORTENER</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="heading" style="margin-top: 50px;">
+        <h1>Short URL</h1>
+    </div>
+    <section id="urlbox">
+        <h1>Paste the URL to be shortened</h1>
+        <div class="container">
+            <form action="{% url 'shorten_url' %}" method="POST">
+                {% csrf_token %}
+                <input type="url" name="original_url" placeholder="Enter the url here" required>
+                <input type="text" name="custom_short_url" placeholder="Enter custom short url (optional)">
+                <button type="submit">Shorten URL</button>
+            </form>
+
+            {% if short_url %}
+            <div class="shortened-url">
+                <p>Shortened URL: <a href="{{ short_url }}" target="_blank">{{ short_url }}</a></p>
+                {% if url %}
+                <p>Click Count: {{ url.clicks }}</p>
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
+        <p class="boxtextcenter"><b>ShortURL is a free tool to shorten URLs and generate short links</b><br><b>URL shortener allows to create a shortened link making it easy to share</b></p>
+    </section>
+</body>
+</html>
+

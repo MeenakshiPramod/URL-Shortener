@@ -1,0 +1,105 @@
+body {
+    font-family: 'Tahoma',Segoe UI, Geneva, Verdana, sans-serif;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* background-color: #f9f9f9; */
+    background-color: rgba(255, 255, 255, 0.8);
+   /* background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg');*/
+   background-image: url('https://i.pinimg.com/originals/dd/ca/be/ddcabeb0bbdd9cdb4e5e911c18a4987c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.heading {
+    text-align: center;
+    /* max-width: max-content; */
+    /* padding: 1px; */
+    font-size: xx-large;
+    /* background-color: rgba(67, 90, 133, 0.153); */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Background color with transparency */
+}
+
+.container {
+    margin-top:30px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px;
+    background-color: rgba(115 185 216 / 43%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(250, 251, 251, 0.1);
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px azure;
+
+}
+#urlbox{
+    justify-content: center;
+    text-align: center;
+    
+}
+.boxtextcenter{
+    color: azure;
+}
+
+
+form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="url"] {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[name="custom_short_url"] {
+    width: 60%;
+    height: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #6790ea;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.shortened-url {
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.shortened-url a {
+    color: #031359;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.shortened-url a:hover {
+    text-decoration: underline;
+}
